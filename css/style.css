@@ -1,0 +1,517 @@
+:root {
+    --mainColor: #ffbe33;
+    --mainColor2: #e69c00;
+    --mainColor3: #ff4500;
+    --mainColor4: #7BAE31;
+    --mainColor5: #DDE7B4;
+    --mainColor6: #9370db;
+    --mainColor7: #222831;
+    --mainColor8: #222222;
+    --mainColor9: #a1a1a1;
+
+    --font-1: "Delius", cursive;
+    --font-2: "Permanent Marker", cursive;
+    --font-3: "Tektur", sans-serif;
+    --font-4: "Edu VIC WA NT Hand", cursive;
+    --font-5: "Luckiest Guy", cursive;
+    --font-6: "Caveat", cursive;
+}
+
+/*font-family*/
+
+.font-1 {
+    font-family: var(--font-1);
+}
+
+.font-2 {
+    font-family: var(--font-2);
+}
+
+.font-3 {
+    font-family: var(--font-3);
+}
+
+.font-h {
+    font-family: var(--font-4);
+}
+
+.font-5 {
+    font-family: var(--font-5);
+}
+
+.font-6 {
+    font-family: var(--font-6);
+}
+
+/*endfont-family*/
+
+body {
+    background: url(./../imges/bg/background.jpg) center center / cover no-repeat fixed;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--mainColor);
+}
+
+/*Nasvbar*/
+nav a {
+    color: var(--mainColor2);
+    font-family: var(--font-1);
+    transition: .6s;
+}
+
+.a-color-hover:hover {
+    color: var(--mainColor);
+    transition: .6s;
+}
+
+.navbar form button {
+    background-color: transparent;
+    color: var(--mainColor);
+    border: 1px solid var(--mainColor);
+    transition: .7s;
+}
+
+.navbar form button:hover {
+    background-color: var(--mainColor2);
+    color: #000;
+}
+
+/*endNavbar*/
+
+/*Header*/
+.header {
+    background-image: url('./../imges/hero-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin-bottom: 7%;
+}
+
+.header p {
+    color: var(--mainColor2);
+}
+
+.header .margin-bottom {
+    margin-bottom: 10%;
+}
+
+@media (max-width: 992px) {
+
+    .header .lead {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-con {
+        padding-top: 120px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .header .display-4 {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    .header .btn {
+        width: 100%;
+        padding: 14px;
+        font-size: 1rem;
+    }
+}
+
+/*endHeader*/
+
+/*offer*/
+.offer-card {
+    background-color: var(--mainColor7);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.offer-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--mainColor2);
+    transition: transform 0.7s;
+}
+
+.offer-card img:hover {
+    transform: scale(1.1);
+}
+
+.order-btn {
+    background-color: var(--mainColor);
+    color: var(--mainColor8);
+    border: none;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-family: var(--font-5);
+    transition: 0.7s;
+}
+
+.order-btn:hover {
+    background-color: var(--mainColor2);
+    color: var(--mainColor8);
+    transform: scale(1.05);
+}
+
+@media (max-width: 767px) {
+    .col-md-6 .offer-card {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
+@media (max-width: 430px) {
+    .col-md-6 .offer-card {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/*endoffer*/
+
+/*menu*/
+.menu ul li button.color {
+    background-color: transparent !important;
+    color: #fff !important;
+    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid var(--mainColor2);
+    font-family: var(--font-1);
+    transition: 0.6s;
+}
+
+.menu ul li button.color:hover {
+    background-color: var(--mainColor2) !important;
+    color: #000 !important;
+    transform: scale(1.2);
+}
+
+.menu-card {
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 200%;
+    height: 150%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.8s;
+}
+
+.menu-img {
+    background: rgb(194, 194, 194);
+    border-radius: 0px 0px 0px 45px;
+    width: 100%;
+    height: 200px;
+}
+
+.menu-img img {
+    width: 150%;
+    height: 100%;
+    border-radius: 0px 0px 0px 45px;
+
+}
+
+.menu-image {
+    max-width: 40%;
+    object-fit: cover;
+}
+
+.menu-content {
+    background-color: var(--mainColor7);
+    font-family: var(--font-4);
+}
+
+.menu-content span {
+    color: var(--mainColor4);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.cart-btn {
+    background-color: var(--mainColor2);
+    border: none;
+    border-radius: 50%;
+    transition: 0.9s;
+}
+
+.cart-btn:hover {
+    background-color: var(--mainColor);
+    transform: scale(1.2);
+}
+
+.menu-card:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+/*endmenu*/
+
+/*about*/
+.about {
+    background-image: url('./../imges/restaurant/about.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    min-height: 50vh;
+    color: rgb(0, 0, 0);
+}
+
+.about a {
+    color: #000;
+    border: 2px solid var(--mainColor);
+    border-radius: 50px;
+    font-family: cursive;
+    transition: 0.6s;
+}
+
+.about a:hover {
+    background-color: var(--mainColor);
+    color: var(--mainColor7);
+    transform: scale(1.1);
+}
+
+/*endabout*/
+
+/*client*/
+.clients {
+  min-height: 60vh;
+   
+}
+
+.testimonial-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #fff;
+}
+
+.testimonial-text {
+    width: 57%;
+    color: #fff;
+    font-family: var(--font-1);
+    max-width: 100%;
+    font-size: 1.4rem;
+}
+
+.clients span {
+    font-weight: 600;
+    font-family: var(--font-1);
+}
+
+.clients h5 {
+    font-weight: bold;
+    font-family: var(--font-3);
+    color: var(--mainColor4);
+    font-size: 1.6rem
+}
+
+/*endclient*/
+
+/*Reserve*/
+.reserve-section {
+    background: linear-gradient(rgba(44, 41, 41, 0.521), rgba(43, 65, 41, 0.6));
+    height: 80vh;
+}
+
+.reserve-section .reserve {
+    margin-top: 15%;
+}
+
+.reserve-section p {
+    color: #DDE7B4;
+}
+
+.reserve-section span::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--mainColor4);
+}
+
+.reserve-section .color-r {
+    color: var(--mainColor4);
+}
+
+/*endReserve*/
+
+/*------------------------------------------------------------------------------*/
+
+/*about-us*/
+.title-about{
+    background: url('./../imges/restaurant/aboutUs.jpg') center center / cover no-repeat fixed;
+    height: 55vh;
+    padding: 100px 0;
+}
+.title-about h2 {
+    color: #000000;
+
+}
+.about-us {
+    background: linear-gradient(rgba(0, 0, 0, 0.521), rgba(90, 90, 90, 0.6));
+}
+
+/*endabout-us*/
+
+/*------------------------------------------------------------------------------*/
+
+/*CONTACT US*/
+.contact-us h4 {
+    color: var(--mainColor4);
+    font-family: var(--font-5);
+}
+
+.contact-us p {
+    color: #DDE7B4;
+    font-family: var(--font-1);
+}
+
+.contact-us .contact-btn {
+    border: solid 2px var(--mainColor4);
+    color: #fff;
+    border-radius: 50px;
+    font-family: var(--font-1);
+    transition: 0.6s;
+}
+
+.contact-us .contact-btn:hover {
+    background-color: var(--mainColor4);
+    color: #000;
+    transform: scale(1.1);
+}
+
+.contact-us label {
+    color: var(--mainColor4);
+    font-family: var(--font-1);
+}
+
+.contact-us .form-control {
+    background-color: var(--mainColor7);
+    border: 1px solid var(--mainColor4);
+}
+
+/*endCONTACT US*/
+
+/*------------------------------------------------------------------------------*/
+
+/*reservation*/
+
+.reservation p {
+    color: var(--mainColor5);
+    font-family: var(--font-4);
+}
+
+.reservation .form-control,
+.reservation .form-select {
+    background-color: #222;
+    border: 1px solid #444;
+    color: var(--mainColor9);
+}
+
+.reservation .form-control:focus,
+.reservation .form-select:focus {
+    border-color: var(--mainColor2);
+    box-shadow: 0 0 0 0.2rem rgba(251, 189, 8, 0.25);
+    background-color: #222;
+    color: var(--mainColor9);
+}
+
+.reservation .form-floating label {
+    color: var(--mainColor5);
+}
+
+.reservation .container {
+    max-width: 700px;
+}
+
+/*endreservation*/
+
+/*------------------------------------------------------------------------------*/
+
+/*service*/
+.section-services {
+    padding: 60px 0;
+}
+
+.section-services h6 {
+    color: var(--mainColor4);
+    letter-spacing: 2px;
+}
+
+.section-services span::after {
+    content: '';
+    display: block;
+    width: 85px;
+    height: 3px;
+    background-color: var(--mainColor4);
+}
+
+.section-services p {
+    color: var(--mainColor5);
+    line-height: 1.7;
+}
+
+.section-services ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.section-services ul li {
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.section-services ul li::before {
+    content: "✔";
+    color: #82b440;
+    margin-right: 10px;
+}
+
+.img-custom {
+    max-width: 100%;
+    border-radius: 10px;
+}
+.line-animate {
+    animation: expandLine 1s ease-out forwards;
+}
+
+@keyframes expandLine {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 85px;
+    }
+}
+
+/*endservice*/
+
+/*footer*/
+footer h5 {
+    font-family: cursive;
+}
+
+footer p {
+    font-family: var(--font-1);
+}
+
+/*endfooter*/
+
+
+/*myClass*/
+.a-color {
+    color: var(--mainColor) !important;
+}
+
+/*endmyClass*/
