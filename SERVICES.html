@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hasson B!tes</title>
+    <title>Hasson B!tes- services</title>
 
     <meta name="description" content="A simple and clean HTML template for your website.">
     <meta name="keywords" content="HTML, template, website, clean, simple">
@@ -63,7 +63,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-4 ms-4 font-a">
-
                     <li class="nav-item ">
                         <a class="nav-link active a-color" aria-current="page" href="./index.html">HOME</a>
                     </li>
@@ -90,10 +89,19 @@
                     </li>
 
                 </ul>
-
-                <form class="d-flex me-4 Order Online">
-                    <button class="btn mx-5 font-2" type="submit">Order Online</i></button>
+                <form class="d-flex">
+                    <button class="btn mx-5 font-2" type="submit">Order Online</button>
                 </form>
+
+                <li class="nav-item d-flex align-items-center">
+                    <a href="cart.html" class="position-relative">
+                        <i class="fas fa-shopping-cart fa-lg"></i>
+                        <span id="cart-count"
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            0
+                        </span>
+                    </a>
+                </li>
             </div>
         </div>
     </nav>
@@ -109,7 +117,12 @@
                         <h6>DELIVERY</h6><span class="d-block mx-auto mx-md-0 my-2 line-animate"></span>
                         <h2 class="text-white my-3 fw-bold font-h fs-1">Well Served</h2>
                         <p class="fs-5 mb-4 font-6 fs-4">
-                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati harum, deserunt debitis facilis officia quisquam quod vel ad. Repellat enim similique quos hic placeat a minus consequatur officia, facere laboriosam repudiandae voluptate sint exercitationem iste rem. Aut ipsa veritatis omnis soluta consequatur excepturi. Ea, nihil qui quo dolorem atque ratione placeat doloribus corrupti veritatis aspernatur suscipit nulla quaerat pariatur tempora cum quae nesciunt, quia odit repellat molestiae asperiores? Aspernatur, illum.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati harum, deserunt debitis
+                            facilis officia quisquam quod vel ad. Repellat enim similique quos hic placeat a minus
+                            consequatur officia, facere laboriosam repudiandae voluptate sint exercitationem iste rem.
+                            Aut ipsa veritatis omnis soluta consequatur excepturi. Ea, nihil qui quo dolorem atque
+                            ratione placeat doloribus corrupti veritatis aspernatur suscipit nulla quaerat pariatur
+                            tempora cum quae nesciunt, quia odit repellat molestiae asperiores? Aspernatur, illum.
                         </p>
                         <ul class="row font-1">
                             <li class="col-6">Food Delivery</li>
@@ -123,7 +136,7 @@
             </div>
         </section>
 
-           <section>
+        <section>
             <div class="container section-services">
                 <div class="row align-items-center">
                     <div class="col-md-5 offset-md-1 text-center text-md-start">
@@ -131,7 +144,12 @@
 
                         <h2 class="text-white my-3 fw-bold font-h fs-1">Food Catering</h2>
                         <p class="fs-6 mb-4 font-6 fs-4">
-                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati harum, deserunt debitis facilis officia quisquam quod vel ad. Repellat enim similique quos hic placeat a minus consequatur officia, facere laboriosam repudiandae voluptate sint exercitationem iste rem. Aut ipsa veritatis omnis soluta consequatur excepturi. Ea, nihil qui quo dolorem atque ratione placeat doloribus corrupti veritatis aspernatur suscipit nulla quaerat pariatur tempora cum quae nesciunt, quia odit repellat molestiae asperiores? Aspernatur, illum.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati harum, deserunt debitis
+                            facilis officia quisquam quod vel ad. Repellat enim similique quos hic placeat a minus
+                            consequatur officia, facere laboriosam repudiandae voluptate sint exercitationem iste rem.
+                            Aut ipsa veritatis omnis soluta consequatur excepturi. Ea, nihil qui quo dolorem atque
+                            ratione placeat doloribus corrupti veritatis aspernatur suscipit nulla quaerat pariatur
+                            tempora cum quae nesciunt, quia odit repellat molestiae asperiores? Aspernatur, illum.
                         </p>
                         <ul class="row font-1">
                             <li class="col-6">Wedding Ceremony</li>
@@ -143,7 +161,7 @@
                     </div>
                     <div class="col-md-5 mb-4 mb-md-0 offset-md-1">
                         <img src="./imges/restaurant/piza.jpg" alt="Food Image" class="img-custom">
-                </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -199,5 +217,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
+
+    <script src="./js/cart.js"></script>
+    <script src="./js/render-menu.js"></script>
 </body>
+
 </html>

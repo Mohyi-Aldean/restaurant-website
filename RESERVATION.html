@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hasson B!tes</title>
+    <title>Hasson B!tes- Reservation</title>
 
     <meta name="description" content="A simple and clean HTML template for your website.">
     <meta name="keywords" content="HTML, template, website, clean, simple">
@@ -63,7 +63,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-4 ms-4 font-a">
-
                     <li class="nav-item ">
                         <a class="nav-link active a-color" aria-current="page" href="./index.html">HOME</a>
                     </li>
@@ -90,44 +89,53 @@
                     </li>
 
                 </ul>
-
-                <form class="d-flex me-4 Order Online">
-                    <button class="btn mx-5 font-2" type="submit">Order Online</i></button>
+                <form class="d-flex">
+                    <button class="btn mx-5 font-2" type="submit">Order Online</button>
                 </form>
+
+                <li class="nav-item d-flex align-items-center">
+                    <a href="cart.html" class="position-relative">
+                        <i class="fas fa-shopping-cart fa-lg"></i>
+                        <span id="cart-count"
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            0
+                        </span>
+                    </a>
+                </li>
             </div>
         </div>
     </nav>
 
     <main>
         <section class="reservation">
-        <div class="container my-5">
-            <h1 class="text-center mb-4 font-1 fs-1 fw-bold">Reservation</h1>
-            <p class="text-center mb-5">Please fill out the form below to make a reservation.</p>
-            <form>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="">
-                    <label for="floatingInput">Your Name</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="Phone Number">
-                    <label for="floatingInput">Phone Number</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                        <option selected>How many persons?</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                    </select>
-                    <label for="floatingSelect">Works with selects</label>
-                </div>
-                 <div class="form-floating mb-3">
-                    <input type="time" class="form-control" id="floatingInput" placeholder="Time">
-                    <label for="floatingInput">Time</label>
-                </div>
-            </form>
-        </div>
+            <div class="container my-5">
+                <h1 class="text-center mb-4 font-1 fs-1 fw-bold">Reservation</h1>
+                <p class="text-center mb-5">Please fill out the form below to make a reservation.</p>
+                <form>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="">
+                        <label for="floatingInput">Your Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Phone Number">
+                        <label for="floatingInput">Phone Number</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                            <option selected>How many persons?</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <label for="floatingSelect">Works with selects</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="time" class="form-control" id="floatingInput" placeholder="Time">
+                        <label for="floatingInput">Time</label>
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
 
@@ -180,5 +188,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
+
+    <script src="./js/cart.js"></script>
+    <script src="./js/render-menu.js"></script>
 </body>
+
 </html>

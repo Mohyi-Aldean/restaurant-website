@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hasson B!tes</title>
+    <title>Hasson B!tes- Menu</title>
 
     <meta name="description" content="A simple and clean HTML template for your website.">
     <meta name="keywords" content="HTML, template, website, clean, simple">
@@ -63,7 +63,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-4 ms-4 font-a">
-
                     <li class="nav-item ">
                         <a class="nav-link active a-color" aria-current="page" href="./index.html">HOME</a>
                     </li>
@@ -90,10 +89,19 @@
                     </li>
 
                 </ul>
-
-                <form class="d-flex me-4 Order Online">
-                    <button class="btn mx-5 font-2" type="submit">Order Online</i></button>
+                <form class="d-flex">
+                    <button class="btn mx-5 font-2" type="submit">Order Online</button>
                 </form>
+
+                <li class="nav-item d-flex align-items-center">
+                    <a href="cart.html" class="position-relative">
+                        <i class="fas fa-shopping-cart fa-lg"></i>
+                        <span id="cart-count"
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            0
+                        </span>
+                    </a>
+                </li>
             </div>
         </div>
     </nav>
@@ -145,7 +153,8 @@
                                 <!-- Menu Cards-1 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/Burger.png" alt="Burger" class="menu-image">
+                                        <img src="./imges/food/Burger.png" class="menu-image" alt="Burger"
+                                            onclick='openProductModal("Burger", 10, "./imges/food/Burger.png")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Burger</h5>
@@ -153,15 +162,19 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Cheeseburger", price: 8.5, image: "./imges/food/Burger.png" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Menu Cards-2 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/Burger2.png" alt="Burger" class="menu-image">
+                                        <img src="./imges/food/Burger2.png" alt="Burger" class="menu-image"
+                                            onclick='openProductModal("Burger", 10, "./imges/food/Burger2.png")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Burger</h5>
@@ -169,15 +182,19 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Cheeseburger", price: 8.5, image: "./imges/food/Burger2.png" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Menu Cards-3 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/Burger3.png" alt="Burger" class="menu-image">
+                                        <img src="./imges/food/Burger3.png" alt="Burger" class="menu-image"
+                                            onclick='openProductModal("Burger", 10, "./imges/food/Burger3.png")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Burger</h5>
@@ -185,15 +202,19 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Cheeseburger", price: 8.5, image: "./imges/food/Burger3.png" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Menu Cards-4 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/Pizza.png" alt="Pizza" class="menu-image">
+                                        <img src="./imges/food/Pizza.png" alt="Pizza" class="menu-image"
+                                            onclick='openProductModal("Pizza", 10, "./imges/food/Pizza.png")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Pizza</h5>
@@ -201,15 +222,19 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Pizza pepperoni", price: 12.5, image: "./imges/food/Pizza.png" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Menu Cards-5 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/Pizza2.png" alt="Pizza" class="menu-image">
+                                        <img src="./imges/food/Pizza2.png" alt="Pizza" class="menu-image"
+                                            onclick='openProductModal("Pizza", 10, "./imges/food/Pizza2.png")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Pizza</h5>
@@ -217,15 +242,19 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Pizza pepperoni", price: 12.5, image: "./imges/food/Pizza2.png" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Menu Cards-6 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/Pizza3.png" alt="Pizza" class="menu-image">
+                                        <img src="./imges/food/Pizza3.png" alt="Pizza" class="menu-image"
+                                            onclick='openProductModal("Pizza", 10, "./imges/food/Pizza3.png")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Pizza</h5>
@@ -233,15 +262,19 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Pizza pepperoni", price: 12.5, image: "./imges/food/Pizza3.png" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Menu Cards-7 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/appetizers.jpg" alt="appetizers" class="menu-image">
+                                        <img src="./imges/food/appetizers.jpg" alt="appetizers" class="menu-image"
+                                            onclick='openProductModal("Appetizers", 10, "./imges/food/appetizers.jpg")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Appetizers</h5>
@@ -249,15 +282,19 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Appetizers", price: 6.5, image: "./imges/food/appetizers.jpg" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Menu Cards-8 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/appetizers2.jpg" alt="appetizers" class="menu-image">
+                                        <img src="./imges/food/appetizers2.jpg" alt="appetizers" class="menu-image"
+                                            onclick='openProductModal("Appetizers", 10, "./imges/food/appetizers2.jpg")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Appetizers</h5>
@@ -265,15 +302,19 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Appetizers", price: 6.5, image: "./imges/food/appetizers2.jpg" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Menu Cards-9 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/appetizers3.jpg" alt="appetizers" class="menu-image">
+                                        <img src="./imges/food/appetizers3.jpg" alt="appetizers" class="menu-image"
+                                            onclick='openProductModal("Appetizers", 10, "./imges/food/appetizers3.jpg")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Appetizers</h5>
@@ -281,8 +322,11 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Appetizers", price: 6.5, image: "./imges/food/appetizers3.jpg" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -291,14 +335,18 @@
                                     <div class="menu-img py-4">
                                         <img src="./imges/food/Fries.png" alt="Fries" class="menu-image">
                                     </div>
-                                    <div class="menu-content text-white text-center py-2 px-3">
+                                    <div class="menu-content text-white text-center py-2 px-3"
+                                        onclick='openProductModal("Fries", 10, "./imges/food/Fries.png")'>
                                         <h5>the best Fries</h5>
                                         <p class="mb-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Fries", price: 3.5, image: "./imges/food/Fries.png" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -307,14 +355,18 @@
                                     <div class="menu-img py-4">
                                         <img src="./imges/food/Fries2.png" alt="Fries" class="menu-image">
                                     </div>
-                                    <div class="menu-content text-white text-center py-2 px-3">
+                                    <div class="menu-content text-white text-center py-2 px-3"
+                                        onclick='openProductModal("Fries", 10, "./imges/food/Fries2.png")'>
                                         <h5>the best Fries</h5>
                                         <p class="mb-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Fries", price: 3.5, image: "./imges/food/Fries2.png" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -323,14 +375,18 @@
                                     <div class="menu-img py-4">
                                         <img src="./imges/food/Burger4.png" alt="Burger" class="menu-image">
                                     </div>
-                                    <div class="menu-content text-white text-center py-2 px-3">
+                                    <div class="menu-content text-white text-center py-2 px-3"
+                                        onclick='openProductModal("Burger", 10, "./imges/food/Burger4.png")'>
                                         <h5>Delicious Burger</h5>
                                         <p class="mb-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Cheeseburger", price: 8.5, image: "./imges/food/Burger4.png" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
 
@@ -340,14 +396,18 @@
                                     <div class="menu-img py-4">
                                         <img src="./imges/food/Burger5.png" alt="Burger" class="menu-image">
                                     </div>
-                                    <div class="menu-content text-white text-center py-2 px-3">
+                                    <div class="menu-content text-white text-center py-2 px-3"
+                                        onclick='openProductModal("Burger", 10, "./imges/food/Burger5.png")'>
                                         <h5>Delicious Burger</h5>
                                         <p class="mb-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Cheeseburger", price: 8.5, image: "./imges/food/Burger5.png" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
 
@@ -357,14 +417,18 @@
                                     <div class="menu-img py-4">
                                         <img src="./imges/food/Burger6.jpg" alt="Burger" class="menu-image">
                                     </div>
-                                    <div class="menu-content text-white text-center py-2 px-3">
+                                    <div class="menu-content text-white text-center py-2 px-3"
+                                        onclick='openProductModal("Burger", 10, "./imges/food/Burger6.jpg")'>
                                         <h5>Delicious Burger</h5>
                                         <p class="mb-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Cheeseburger", price: 8.5, image: "./imges/food/Burger6.jpg" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
 
@@ -374,14 +438,18 @@
                                     <div class="menu-img py-4">
                                         <img src="./imges/food/Burger7.jpg" alt="Burger" class="menu-image">
                                     </div>
-                                    <div class="menu-content text-white text-center py-2 px-3">
+                                    <div class="menu-content text-white text-center py-2 px-3"
+                                        onclick='openProductModal("Burger", 10, "./imges/food/Burger7.jpg")'>
                                         <h5>Delicious Burger</h5>
                                         <p class="mb-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Cheeseburger", price: 8.5, image: "./imges/food/Burger7.jpg" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
 
@@ -389,7 +457,8 @@
                                 <!-- Menu Cards-16 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/Burger8.jpg" alt="Burger" class="menu-image">
+                                        <img src="./imges/food/Burger8.jpg" alt="Burger" class="menu-image"
+                                            onclick='openProductModal("Burger", 10, "./imges/food/Burger8.jpg")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Burger</h5>
@@ -397,8 +466,11 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Cheeseburger", price: 8.5, image: "./imges/food/Burger8.jpg" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
 
@@ -406,7 +478,8 @@
                                 <!-- Menu Cards-17 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/Pizza4.jpg" alt="Pizza" class="menu-image">
+                                        <img src="./imges/food/Pizza4.jpg" alt="Pizza" class="menu-image"
+                                            onclick='openProductModal("Pizza", 10, "./imges/food/Pizza4.jpg")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Pizza</h5>
@@ -414,15 +487,19 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Pizza pepperoni", price: 12.5, image: "./imges/food/Pizza4.jpg" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Menu Cards-18 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/Pizza5.jpg" alt="Pizza" class="menu-image">
+                                        <img src="./imges/food/Pizza5.jpg" alt="Pizza" class="menu-image"
+                                            onclick='openProductModal("Pizza", 10, "./imges/food/Pizza5.jpg")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Pizza</h5>
@@ -430,15 +507,19 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Pizza pepperoni", price: 12.5, image: "./imges/food/Pizza5.jpg" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Menu Cards-19 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/Pizza6.webp" alt="Pizza" class="menu-image">
+                                        <img src="./imges/food/Pizza6.webp" alt="Pizza" class="menu-image"
+                                            onclick='openProductModal("Pizza", 10, "./imges/food/Pizza6.webp")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Pizza</h5>
@@ -446,15 +527,19 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Pizza pepperoni", price: 12.5, image: "./imges/food/Pizza6.webp" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Menu Cards-20 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/Pizza7.jpg" alt="Pizza" class="menu-image">
+                                        <img src="./imges/food/Pizza7.jpg" alt="Pizza" class="menu-image"
+                                            onclick='openProductModal("Pizza", 10, "./imges/food/Pizza7.jpg")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Pizza</h5>
@@ -462,15 +547,19 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Pizza pepperoni", price: 12.5, image: "./imges/food/Pizza7.jpg" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Menu Cards-21 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/Pizza8.jpg" alt="Pizza" class="menu-image">
+                                        <img src="./imges/food/Pizza8.jpg" alt="Pizza" class="menu-image"
+                                            onclick='openProductModal("Pizza", 10, "./imges/food/Pizza8.jpg")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Pizza</h5>
@@ -478,15 +567,19 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Pizza pepperoni", price: 12.5, image: "./imges/food/Pizza8.jpg" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Menu Cards-22 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/appetizers4.jpg" alt="appetizers" class="menu-image">
+                                        <img src="./imges/food/appetizers4.jpg" alt="appetizers" class="menu-image"
+                                            onclick='openProductModal("Appetizers", 10, "./imges/food/appetizers4.jpg")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Appetizers</h5>
@@ -494,15 +587,19 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Appetizers", price: 6.5, image: "./imges/food/appetizers4.jpg" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Menu Cards-23 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/appetizers5.jpg" alt="appetizers" class="menu-image">
+                                        <img src="./imges/food/appetizers5.jpg" alt="appetizers" class="menu-image"
+                                            onclick='openProductModal("Appetizers", 10, "./imges/food/appetizers5.jpg")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Appetizers</h5>
@@ -510,22 +607,25 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Appetizers", price: 6.5, image: "./imges/food/appetizers5.jpg" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                         </div>
-
                         <div class="tab-pane fade" id="pills-Burger" role="tabpanel" aria-labelledby="pills-Burger-tab"
                             tabindex="0">
                             <div class="row g-3">
                                 <!-- Menu Cards-1 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/Burger.png" alt="Burger" class="menu-image">
+                                        <img src="./imges/food/Burger.png" class="menu-image" alt="Burger"
+                                            onclick='openProductModal("Burger", 10, "./imges/food/Burger.png")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Burger</h5>
@@ -533,15 +633,19 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Cheeseburger", price: 8.5, image: "./imges/food/Burger.png" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Menu Cards-2 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/Burger2.png" alt="Burger" class="menu-image">
+                                        <img src="./imges/food/Burger2.png" alt="Burger" class="menu-image"
+                                            onclick='openProductModal("Burger", 10, "./imges/food/Burger2.png")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Burger</h5>
@@ -549,15 +653,19 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Cheeseburger", price: 8.5, image: "./imges/food/Burger2.png" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Menu Cards-3 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/Burger3.png" alt="Burger" class="menu-image">
+                                        <img src="./imges/food/Burger3.png" alt="Burger" class="menu-image"
+                                            onclick='openProductModal("Burger", 10, "./imges/food/Burger3.png")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Burger</h5>
@@ -565,8 +673,11 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Cheeseburger", price: 8.5, image: "./imges/food/Burger3.png" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -575,14 +686,18 @@
                                     <div class="menu-img py-4">
                                         <img src="./imges/food/Burger4.png" alt="Burger" class="menu-image">
                                     </div>
-                                    <div class="menu-content text-white text-center py-2 px-3">
+                                    <div class="menu-content text-white text-center py-2 px-3"
+                                        onclick='openProductModal("Burger", 10, "./imges/food/Burger4.png")'>
                                         <h5>Delicious Burger</h5>
                                         <p class="mb-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Cheeseburger", price: 8.5, image: "./imges/food/Burger4.png" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
 
@@ -592,14 +707,18 @@
                                     <div class="menu-img py-4">
                                         <img src="./imges/food/Burger5.png" alt="Burger" class="menu-image">
                                     </div>
-                                    <div class="menu-content text-white text-center py-2 px-3">
+                                    <div class="menu-content text-white text-center py-2 px-3"
+                                        onclick='openProductModal("Burger", 10, "./imges/food/Burger5.png")'>
                                         <h5>Delicious Burger</h5>
                                         <p class="mb-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Cheeseburger", price: 8.5, image: "./imges/food/Burger5.png" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
 
@@ -609,39 +728,48 @@
                                     <div class="menu-img py-4">
                                         <img src="./imges/food/Burger6.jpg" alt="Burger" class="menu-image">
                                     </div>
-                                    <div class="menu-content text-white text-center py-2 px-3">
+                                    <div class="menu-content text-white text-center py-2 px-3"
+                                        onclick='openProductModal("Burger", 10, "./imges/food/Burger6.jpg")'>
                                         <h5>Delicious Burger</h5>
                                         <p class="mb-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Cheeseburger", price: 8.5, image: "./imges/food/Burger6.jpg" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
 
                                 </div>
-                                <!-- Menu Cards-7 -->
+                                <!-- Menu Cards-7-->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
                                         <img src="./imges/food/Burger7.jpg" alt="Burger" class="menu-image">
                                     </div>
-                                    <div class="menu-content text-white text-center py-2 px-3">
+                                    <div class="menu-content text-white text-center py-2 px-3"
+                                        onclick='openProductModal("Burger", 10, "./imges/food/Burger7.jpg")'>
                                         <h5>Delicious Burger</h5>
                                         <p class="mb-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Cheeseburger", price: 8.5, image: "./imges/food/Burger7.jpg" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
 
                                 </div>
-                                <!-- Menu Cards-8 -->
+                                <!-- Menu Cards-8-->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/Burger8.jpg" alt="Burger" class="menu-image">
+                                        <img src="./imges/food/Burger8.jpg" alt="Burger" class="menu-image"
+                                            onclick='openProductModal("Burger", 10, "./imges/food/Burger8.jpg")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Burger</h5>
@@ -649,12 +777,17 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Cheeseburger", price: 8.5, image: "./imges/food/Burger8.jpg" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
 
                                 </div>
+
+
                             </div>
                         </div>
 
@@ -664,7 +797,8 @@
                                 <!-- Menu Cards-1 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/Pizza.png" alt="Pizza" class="menu-image">
+                                        <img src="./imges/food/Pizza.png" alt="Pizza" class="menu-image"
+                                            onclick='openProductModal("Pizza", 10, "./imges/food/Pizza.png")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Pizza</h5>
@@ -672,15 +806,19 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Pizza pepperoni", price: 12.5, image: "./imges/food/Pizza.png" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Menu Cards-2 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/Pizza2.png" alt="Pizza" class="menu-image">
+                                        <img src="./imges/food/Pizza2.png" alt="Pizza" class="menu-image"
+                                            onclick='openProductModal("Pizza", 10, "./imges/food/Pizza2.png")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Pizza</h5>
@@ -688,15 +826,19 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Pizza pepperoni", price: 12.5, image: "./imges/food/Pizza2.png" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Menu Cards-3 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/Pizza3.png" alt="Pizza" class="menu-image">
+                                        <img src="./imges/food/Pizza3.png" alt="Pizza" class="menu-image"
+                                            onclick='openProductModal("Pizza", 10, "./imges/food/Pizza3.png")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Pizza</h5>
@@ -704,15 +846,19 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Pizza pepperoni", price: 12.5, image: "./imges/food/Pizza3.png" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Menu Cards-4 -->
+                                <!-- Menu Cards-17 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/Pizza4.jpg" alt="Pizza" class="menu-image">
+                                        <img src="./imges/food/Pizza4.jpg" alt="Pizza" class="menu-image"
+                                            onclick='openProductModal("Pizza", 10, "./imges/food/Pizza4.jpg")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Pizza</h5>
@@ -720,15 +866,19 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Pizza pepperoni", price: 12.5, image: "./imges/food/Pizza4.jpg" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Menu Cards-5 -->
+                                <!-- Menu Cards-18 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/Pizza5.jpg" alt="Pizza" class="menu-image">
+                                        <img src="./imges/food/Pizza5.jpg" alt="Pizza" class="menu-image"
+                                            onclick='openProductModal("Pizza", 10, "./imges/food/Pizza5.jpg")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Pizza</h5>
@@ -736,15 +886,19 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Pizza pepperoni", price: 12.5, image: "./imges/food/Pizza5.jpg" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Menu Cards-6 -->
+                                <!-- Menu Cards-19 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/Pizza6.webp" alt="Pizza" class="menu-image">
+                                        <img src="./imges/food/Pizza6.webp" alt="Pizza" class="menu-image"
+                                            onclick='openProductModal("Pizza", 10, "./imges/food/Pizza6.webp")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Pizza</h5>
@@ -752,15 +906,19 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Pizza pepperoni", price: 12.5, image: "./imges/food/Pizza6.webp" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Menu Cards-7 -->
+                                <!-- Menu Cards-20 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/Pizza7.jpg" alt="Pizza" class="menu-image">
+                                        <img src="./imges/food/Pizza7.jpg" alt="Pizza" class="menu-image"
+                                            onclick='openProductModal("Pizza", 10, "./imges/food/Pizza7.jpg")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Pizza</h5>
@@ -768,15 +926,19 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Pizza pepperoni", price: 12.5, image: "./imges/food/Pizza7.jpg" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Menu Cards-8 -->
+                                <!-- Menu Cards-21 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/Pizza8.jpg" alt="Pizza" class="menu-image">
+                                        <img src="./imges/food/Pizza8.jpg" alt="Pizza" class="menu-image"
+                                            onclick='openProductModal("Pizza", 10, "./imges/food/Pizza8.jpg")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Pizza</h5>
@@ -784,8 +946,11 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Pizza pepperoni", price: 12.5, image: "./imges/food/Pizza8.jpg" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -795,35 +960,43 @@
                         <div class="tab-pane fade" id="pills-Fries" role="tabpanel" aria-labelledby="pills-Fries-tab"
                             tabindex="0">
                             <div class="row g-3">
-                                <!-- Menu Cards-1 -->
+                                <!-- Menu Cards-1-->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
                                         <img src="./imges/food/Fries.png" alt="Fries" class="menu-image">
                                     </div>
-                                    <div class="menu-content text-white text-center py-2 px-3">
+                                    <div class="menu-content text-white text-center py-2 px-3"
+                                        onclick='openProductModal("Fries", 10, "./imges/food/Fries.png")'>
                                         <h5>the best Fries</h5>
                                         <p class="mb-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Fries", price: 3.5, image: "./imges/food/Fries.png" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Menu Cards-2 -->
+                                <!-- Menu Cards-2-->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
                                         <img src="./imges/food/Fries2.png" alt="Fries" class="menu-image">
                                     </div>
-                                    <div class="menu-content text-white text-center py-2 px-3">
+                                    <div class="menu-content text-white text-center py-2 px-3"
+                                        onclick='openProductModal("Fries", 10, "./imges/food/Fries2.png")'>
                                         <h5>the best Fries</h5>
                                         <p class="mb-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Fries", price: 3.5, image: "./imges/food/Fries2.png" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -836,7 +1009,8 @@
                                 <!-- Menu Cards-1 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/appetizers.jpg" alt="appetizers" class="menu-image">
+                                        <img src="./imges/food/appetizers.jpg" alt="appetizers" class="menu-image"
+                                            onclick='openProductModal("Appetizers", 10, "./imges/food/appetizers.jpg")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Appetizers</h5>
@@ -844,15 +1018,19 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Appetizers", price: 6.5, image: "./imges/food/appetizers.jpg" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Menu Cards-2 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/appetizers2.jpg" alt="appetizers" class="menu-image">
+                                        <img src="./imges/food/appetizers2.jpg" alt="appetizers" class="menu-image"
+                                            onclick='openProductModal("Appetizers", 10, "./imges/food/appetizers2.jpg")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Appetizers</h5>
@@ -860,15 +1038,19 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Appetizers", price: 6.5, image: "./imges/food/appetizers2.jpg" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Menu Cards-3 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/appetizers3.jpg" alt="appetizers" class="menu-image">
+                                        <img src="./imges/food/appetizers3.jpg" alt="appetizers" class="menu-image"
+                                            onclick='openProductModal("Appetizers", 10, "./imges/food/appetizers3.jpg")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Appetizers</h5>
@@ -876,15 +1058,19 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Appetizers", price: 6.5, image: "./imges/food/appetizers3.jpg" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Menu Cards-4 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/appetizers4.jpg" alt="appetizers" class="menu-image">
+                                        <img src="./imges/food/appetizers4.jpg" alt="appetizers" class="menu-image"
+                                            onclick='openProductModal("Appetizers", 10, "./imges/food/appetizers4.jpg")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Appetizers</h5>
@@ -892,15 +1078,19 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Appetizers", price: 6.5, image: "./imges/food/appetizers4.jpg" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Menu Cards-5 -->
                                 <div class="menu-card col-md-4 col-sm-6">
                                     <div class="menu-img py-4">
-                                        <img src="./imges/food/appetizers5.jpg" alt="appetizers" class="menu-image">
+                                        <img src="./imges/food/appetizers5.jpg" alt="appetizers" class="menu-image"
+                                            onclick='openProductModal("Appetizers", 10, "./imges/food/appetizers5.jpg")'>
                                     </div>
                                     <div class="menu-content text-white text-center py-2 px-3">
                                         <h5>Delicious Appetizers</h5>
@@ -908,8 +1098,11 @@
                                             Consequuntur quia impedit quam possimus excepturi sit!</p>
                                         <div class="d-flex justify-content-between align-items-center mt-2">
                                             <span>$20</span>
-                                            <button class="cart-btn p-2"><i
-                                                    class="fa-solid fa-cart-shopping"></i></button>
+                                            <button
+                                                onclick='addToCart({ name: "Appetizers", price: 6.5, image: "./imges/food/appetizers5.jpg" })'
+                                                class="cart-btn p-2">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -918,8 +1111,6 @@
                     </div>
                 </div>
             </div>
-            </div>
-
         </section>
     </main>
 
@@ -972,5 +1163,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
+
+    <script src="./js/cart.js"></script>
+    <script src="./js/render-menu.js"></script>
 </body>
+
 </html>
