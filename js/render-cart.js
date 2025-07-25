@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const container = document.getElementById("cartItemsContainer");
 
   if (cartItems.length === 0) {
-    container.innerHTML = `<p class="d-flex justify-content-center align-items-center lead text-white">No products in your cart.</p>`;
+    container.innerHTML = `<p class="d-flex justify-content-center align-items-center text-white font-1">No products in your cart.</p>`;
     return;
   }
 

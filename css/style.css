@@ -56,6 +56,10 @@ h3 {
 }
 
 /*Nasvbar*/
+.navbar {
+    transition: 0.7s;
+}
+
 nav a {
     color: var(--mainColor2);
     font-family: var(--font-1);
@@ -67,14 +71,14 @@ nav a {
     transition: .6s;
 }
 
-.navbar form button {
+.navbar .online {
     background-color: transparent;
     color: var(--mainColor);
     border: 1px solid var(--mainColor);
     transition: .7s;
 }
 
-.navbar form button:hover {
+.navbar .online:hover {
     background-color: var(--mainColor2);
     color: #000;
 }
@@ -88,6 +92,9 @@ nav a {
 /*endNavbar*/
 
 /*Header*/
+.hero{
+    height: 0vh;
+}
 .header {
     background-image: url('./../imges/hero-bg.jpg');
     background-repeat: no-repeat;
@@ -506,12 +513,6 @@ nav a {
 /*endservice*/
 
 /*------------------------------------------------------------------------------*/
-
-/*cart*/
-
-
-/*endcart*/
-
 /*footer*/
 footer h5 {
     font-family: cursive;
@@ -520,9 +521,7 @@ footer h5 {
 footer p {
     font-family: var(--font-1);
 }
-
 /*endfooter*/
-
 
 /*myClass*/
 .a-color {
