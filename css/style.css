@@ -76,6 +76,7 @@ nav a {
     color: var(--mainColor);
     border: 1px solid var(--mainColor);
     transition: .7s;
+    margin-left: 2rem ;
 }
 
 .navbar .online:hover {
@@ -87,6 +88,13 @@ nav a {
     background-color: transparent !important;
     transition: 0.9s;
     box-shadow: 0 4px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 376px) {
+    .navbar .online {
+     margin: 0 ;
+    }
+
 }
 
 /*endNavbar*/
@@ -132,7 +140,7 @@ nav a {
     }
 
     .header .btn {
-        width: 100%;
+        width: 100% !important;
         padding: 14px;
         font-size: 1rem;
     }
